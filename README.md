@@ -1,13 +1,9 @@
 # tipid
 
-A Clojure library designed to ... well, that part is up to you.
-
-## Usage
-
-FIXME
+Coming Soon ...
 
 ## License
 
-Copyright © 2012 FIXME
+Copyright © 2012 Vijay Kiran
 
 Distributed under the Eclipse Public License, the same as Clojure.
