@@ -1,10 +1,11 @@
 (ns tipid.core
   (:require [compojure.route :as route]
             [compojure.core :as comp]
-            [ring.adapter.jetty :as jetty]))
+            [ring.adapter.jetty :as jetty]
+            [tipid.api :as api]))
 
 (comp/defroutes app
-  (GET "/" [] "<h1>Hello World</h1>"))
+  (GET "/profile" [] (api/profile)))
 
 (defn start
   ([] (start 7881))
