@@ -7,4 +7,5 @@
                  [ring/ring-core "1.1.6"]
                  [ring/ring-jetty-adapter "1.1.6"]
                  [ring/ring-devel "1.1.6"]
-                 [compojure "1.1.3"]])
+                 [compojure "1.1.3"]
+                 [cheshire "4.0.3"]])

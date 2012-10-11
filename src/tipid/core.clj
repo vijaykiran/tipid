@@ -5,8 +5,13 @@
             [tipid.api :as api]))
 
 (comp/defroutes app
-  (GET "/profile" [] (api/profile)))
+  (comp/GET "/profile" [] (api/profile)))
 
 (defn start
   ([] (start 7881))
   ([port] (jetty/run-jetty #'app {:port port :join? false})))
+
+
+(defn -main [args]
+  (println (System/getenv "PORT"))
+  (start (Integer/valueOf (System/getenv "PORT"))))
