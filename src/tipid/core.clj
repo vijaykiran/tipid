@@ -1,6 +1,11 @@
-(ns tipid.core)
+(ns tipid.core
+  (:require [compojure.route :as route]
+            [compojure.core :as comp]
+            [ring.adapter.jetty :as jetty]))
 
-(defn foo
-  "I don't do a whole lot."
-  [x]
-  (println x "Hello, World!"))
+(comp/defroutes app
+  (GET "/" [] "<h1>Hello World</h1>"))
+
+(defn start
+  ([] (start 7881))
+  ([port] (jetty/run-jetty #'app {:port port :join? false})))
