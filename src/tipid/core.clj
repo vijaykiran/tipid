@@ -4,7 +4,7 @@
             [ring.adapter.jetty :as jetty]
             [tipid.api :as api]))
 
-(comp/defroutes routes
+(comp/defroutes app
   (comp/GET "/profile" [] (api/profile))
   (comp/POST "/followers" {body :body} (api/add-follower body))
   (comp/DELETE "/followers" {body :body} (api/delete-follower body)))
