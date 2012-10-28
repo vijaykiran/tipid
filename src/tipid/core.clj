@@ -6,8 +6,8 @@
 
 (comp/defroutes app
   (comp/GET "/profile" [] (api/profile))
-  (comp/POST "/followers" {body :body} (api/add-follower body))
-  (comp/DELETE "/followers" {body :body} (api/delete-follower body)))
+  (comp/POST "/followers" {body :body headers :headers} (api/add-follower body))
+  (comp/DELETE "/followers/:id" {body :body headers :headers id :id} (api/delete-follower)))
 
 (defn start
   ([] (start 7881))

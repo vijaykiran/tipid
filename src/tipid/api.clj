@@ -30,6 +30,8 @@
 
 (defn delete-follower
   "Delete follower"
-  [body]
+  [id body headers]
   (println (slurp body))
+  (println headers)
+  (println id)
   (success {}))
