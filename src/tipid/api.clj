@@ -22,8 +22,14 @@
                                                       :servers servers
                                                       :permissions permissions}}))
 
-(defn followers
-  "Process followers POST reqeust"
+(defn add-follower
+  "add follower"
   [body]
-  (println body)
+  (println (slurp body))
+  (success {}))
+
+(defn delete-follower
+  "Delete follower"
+  [body]
+  (println (slurp body))
   (success {}))

@@ -4,9 +4,10 @@
             [ring.adapter.jetty :as jetty]
             [tipid.api :as api]))
 
-(comp/defroutes app
+(comp/defroutes routes
   (comp/GET "/profile" [] (api/profile))
-  (comp/POST "/followers" {body :body} (api/followers body)))
+  (comp/POST "/followers" {body :body} (api/add-follower body))
+  (comp/DELETE "/followers" {body :body} (api/delete-follower body)))
 
 (defn start
   ([] (start 7881))
