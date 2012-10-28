@@ -18,8 +18,12 @@
   (success {"https://tent.io/types/info/basic/v0.1.0" user-info
             "https://tent.io/types/info/core/v0.1.0" {
                                                       :licenses licenses
-
-
                                                       :entity "http://vijaykiran.com"
                                                       :servers servers
                                                       :permissions permissions}}))
+
+(defn followers
+  "Process followers POST reqeust"
+  [body]
+  (println body)
+  (success {}
